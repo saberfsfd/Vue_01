@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+<div>
+  <span>来自于:</span>
+
+  <select v-model="from">
+    <option value="北京市">北京</option>
+    <option value="南京市">南京</option>
+    <option value="天津市">天津</option>
+  </select>
+</div>
+<div>
+  <span>爱好:</span>
+  <input type="checkbox" v-model="hobby" value="抽烟">抽烟
+  <input type="checkbox" v-model="hobby"  value="喝酒">喝酒
+  <input type="checkbox" v-model="hobby"  value="写代码">写代码
+</div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    data(){
+      return {
+        from:"",
+        hobby:[]
+      }
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss" scoped>
+
 </style>
